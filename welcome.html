@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to StressRelief App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ffc7c7;
+      padding: 10px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-section img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 8px 12px;
+    }
+
+    nav button:hover {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    .auth-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    #welcome {
+      text-align: center;
+      background-image: url("https://i.pinimg.com/736x/a0/fe/39/a0fe390766af2041a2bbdb9713109322.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #9292eb;
+      padding: 100px 20px 150px;
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    #welcome h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    #welcome p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 10px;
+      color: #3c3a3a;
+    }
+
+    .get-started-btn {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2196f3;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .get-started-btn:hover {
+      background-color: #1976d2;
+      transform: translateX(-50%) scale(1.05);
+    }
+
+    #about {
+      background-color: #ffe0b2;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 17px;
+      color: #fb9292;
+    }
+
+    footer {
+      background-color: #aca6a6;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-section">
+      <img src="https://i.pinimg.com/736x/28/a0/cf/28a0cfddd45cab5a17e3005ed6671f02.jpg" alt="Logo" />
+      <span style="font-size: 20px; font-weight: bold;">easeon</span>
+    </div>
+    <nav>
+      <button onclick="scrollToSection('welcome')">Home</button>
+      <button onclick="scrollToSection('about')">About Us</button>
+      <div class="auth-buttons">
+        <a href="https://github.com/Naina942/webpage" target="_self"><button>Login</button></a>
+      </div>
+    </nav>
+  </header>
+
+  <section id="welcome">
+    <h1>Welcome to easeon</h1>
+    <p>Relieve stress through games and a friendly chatbot.</p>
+    <p>Feel relaxed, connected, and supported every day.</p>
+    <a href="https://github.com/Naina942/webpage" target="_self"><button class="get-started-btn">
+      Get Started →
+    </button></a>
+  </section>
+
+  <section id="about">
+    <h2 style="color: #ed5959;">About Us</h2>
+    <p>We create a calm digital space to unwind and connect. Experience peace with fun, supportive tools designed to reduce stress.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 StressRelief App. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+</body>
+</html>
